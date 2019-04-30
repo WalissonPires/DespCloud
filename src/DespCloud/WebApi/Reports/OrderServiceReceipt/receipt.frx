@@ -1,0 +1,209 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report ScriptLanguage="CSharp" StartReportEvent="_StartReport" ReportInfo.Created="02/12/2019 21:30:41" ReportInfo.Modified="03/11/2019 21:23:55" ReportInfo.CreatorVersion="2019.1.0.0">
+  <ScriptText>using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Windows.Forms;
+using System.Drawing;
+using System.Data;
+using FastReport;
+using FastReport.Data;
+using FastReport.Dialog;
+using FastReport.Barcode;
+using FastReport.Table;
+using FastReport.Utils;
+
+namespace FastReport
+{
+  public class ReportScript
+  {
+    private void _StartReport(object sender, EventArgs e)
+    {
+      Text24.Text  = (String)Report.GetParameterValue(&quot;CompanyLogoPath&quot;); 
+      Picture2.ImageLocation = (String)Report.GetParameterValue(&quot;CompanyLogoPath&quot;); 
+    }
+  }
+}
+</ScriptText>
+  <Dictionary>
+    <BusinessObjectDataSource Name="OSData" ReferenceName="OSData" DataType="null" Enabled="true">
+      <Column Name="OrderId" DataType="System.String"/>
+      <Column Name="CompanyName" DataType="System.String"/>
+      <Column Name="CompanyCpfCnpj" DataType="System.String"/>
+      <Column Name="CompanyPhone" DataType="System.String"/>
+      <Column Name="CompanyAddress" DataType="System.String"/>
+      <Column Name="CompanyLogo" DataType="System.Byte[]" BindableControl="Picture"/>
+      <Column Name="ClientName" DataType="System.String"/>
+      <Column Name="ClientCpfCnpj" DataType="System.String"/>
+      <Column Name="ClientAddress" DataType="System.String"/>
+      <Column Name="Date" DataType="System.DateTime"/>
+      <Column Name="Total" DataType="System.Decimal"/>
+      <BusinessObjectDataSource Name="Services" DataType="null" Enabled="true">
+        <Column Name="Name" DataType="System.String"/>
+        <Column Name="Vehicle" DataType="System.String"/>
+        <Column Name="Honorary" DataType="System.Decimal"/>
+        <Column Name="PlateCard" DataType="System.Decimal"/>
+        <Column Name="Rate" DataType="System.Decimal"/>
+        <Column Name="Other" DataType="System.Decimal"/>
+      </BusinessObjectDataSource>
+    </BusinessObjectDataSource>
+  </Dictionary>
+  <ReportPage Name="Page1">
+    <DataBand Name="Data1" Width="718.2" Height="340.65" DataSource="OSData">
+      <TableObject Name="Table4" Left="1" Top="0.76" Width="718.2" Height="85.05" Border.Lines="Left, Right, Top">
+        <TableColumn Name="Column16" Width="90.72"/>
+        <TableColumn Name="Column17" Width="81.27"/>
+        <TableColumn Name="Column18" Width="213.57"/>
+        <TableColumn Name="Column19" Width="71.82"/>
+        <TableColumn Name="Column20" Width="260.82"/>
+        <TableRow Name="Row8" Height="28.35">
+          <TableCell Name="Cell36" Border.Lines="Right" RowSpan="3">
+            <PictureObject Name="Picture2" Left="7" Top="5" Width="75.6" Height="75.6" DataColumn="OSData.CompanyLogo"/>
+          </TableCell>
+          <TableCell Name="Cell37" Border.Lines="Bottom" ColSpan="4">
+            <TextObject Name="Text1" Width="627.48" Height="28.35" Dock="Fill" Text="[OSData.CompanyName]" HorzAlign="Center" VertAlign="Center" Font="Arial, 16pt, style=Bold"/>
+          </TableCell>
+          <TableCell Name="Cell38"/>
+          <TableCell Name="Cell39"/>
+          <TableCell Name="Cell40"/>
+        </TableRow>
+        <TableRow Name="Row9" Height="28.35">
+          <TableCell Name="Cell41"/>
+          <TableCell Name="Cell42" Border.Lines="Bottom">
+            <TextObject Name="Text2" Width="81.27" Height="28.35" Dock="Fill" Text="CPF/CNPJ:" VertAlign="Center" Font="Arial, 10pt, style=Bold"/>
+          </TableCell>
+          <TableCell Name="Cell43" Border.Lines="Bottom">
+            <TextObject Name="Text3" Width="213.57" Height="28.35" Dock="Fill" Text="[OSData.CompanyCpfCnpj]" VertAlign="Center"/>
+          </TableCell>
+          <TableCell Name="Cell44" Border.Lines="Bottom">
+            <TextObject Name="Text6" Width="71.82" Height="28.35" Dock="Fill" Text="Telefone:" VertAlign="Center" Font="Arial, 10pt, style=Bold"/>
+          </TableCell>
+          <TableCell Name="Cell45" Border.Lines="Bottom">
+            <TextObject Name="Text7" Width="260.82" Height="28.35" Dock="Fill" Text="[OSData.CompanyPhone]" VertAlign="Center"/>
+          </TableCell>
+        </TableRow>
+        <TableRow Name="Row10" Height="28.35">
+          <TableCell Name="Cell46"/>
+          <TableCell Name="Cell47">
+            <TextObject Name="Text4" Width="81.27" Height="28.35" Dock="Fill" Text="Endereço:" VertAlign="Center" Font="Arial, 10pt, style=Bold"/>
+          </TableCell>
+          <TableCell Name="Cell48" ColSpan="3">
+            <TextObject Name="Text5" Width="546.21" Height="28.35" Dock="Fill" Text="[OSData.CompanyAddress]" VertAlign="Center"/>
+          </TableCell>
+          <TableCell Name="Cell49"/>
+          <TableCell Name="Cell50"/>
+        </TableRow>
+      </TableObject>
+      <TableObject Name="Table3" Left="1" Top="85.05" Width="718.19" Height="113.4" Border.Lines="Left, Right, Top">
+        <TableColumn Name="Column21" Width="87.41"/>
+        <TableColumn Name="Column22" Width="361.46"/>
+        <TableColumn Name="Column23" Width="134.66"/>
+        <TableColumn Name="Column24" Width="134.66"/>
+        <TableRow Name="Row11" Height="28.35">
+          <TableCell Name="Cell51" Border.Lines="Bottom" Text="RECIBO" VertAlign="Center" Font="Arial, 12pt, style=Bold" ColSpan="2"/>
+          <TableCell Name="Cell52"/>
+          <TableCell Name="Cell53" Border.Lines="Bottom" Text="Data" VertAlign="Center" Font="Arial, 10pt, style=Bold"/>
+          <TableCell Name="Cell54" Border.Lines="Bottom" Text="[FormatDateTime([OSData.Date], &quot;dd/MM/yyyy&quot;)]" VertAlign="Center"/>
+        </TableRow>
+        <TableRow Name="Row12" Height="28.35">
+          <TableCell Name="Cell56" Border.Lines="Bottom">
+            <TextObject Name="Text9" Width="87.41" Height="28.35" Dock="Fill" Text="Cliente:" Padding="4, 1, 2, 1" VertAlign="Center" Font="Arial, 10pt, style=Bold"/>
+          </TableCell>
+          <TableCell Name="Cell57" Border.Lines="Bottom">
+            <TextObject Name="Text10" Width="361.46" Height="28.35" Dock="Fill" Text="[OSData.ClientName]" VertAlign="Center"/>
+          </TableCell>
+          <TableCell Name="Cell58" Border.Lines="Bottom">
+            <TextObject Name="Text8" Width="134.66" Height="28.35" Dock="Fill" Text="CPF/CNPJ:" VertAlign="Center" Font="Arial, 10pt, style=Bold"/>
+          </TableCell>
+          <TableCell Name="Cell59" Border.Lines="Bottom">
+            <TextObject Name="Text12" Width="134.66" Height="28.35" Dock="Fill" Text="[OSData.ClientCpfCnpj]" VertAlign="Center"/>
+          </TableCell>
+        </TableRow>
+        <TableRow Name="Row13" Height="28.35">
+          <TableCell Name="Cell61" Border.Lines="Bottom">
+            <TextObject Name="Text13" Width="87.41" Height="28.35" Dock="Fill" Text="Endereço:" Padding="4, 1, 2, 1" VertAlign="Center" Font="Arial, 10pt, style=Bold"/>
+          </TableCell>
+          <TableCell Name="Cell62" Border.Lines="Bottom" ColSpan="3">
+            <TextObject Name="Text11" Width="630.78" Height="28.35" Dock="Fill" Text="[OSData.ClientAddress]" VertAlign="Center"/>
+          </TableCell>
+          <TableCell Name="Cell63"/>
+          <TableCell Name="Cell64"/>
+        </TableRow>
+        <TableRow Name="Row19" Height="28.35">
+          <TableCell Name="Cell107" Text="Valor Total:" Padding="4, 1, 2, 1" VertAlign="Center" Font="Arial, 10pt, style=Bold"/>
+          <TableCell Name="Cell108" Text="[OSData.Total]" Format="Currency" Format.UseLocale="true" VertAlign="Center" Font="Arial, 12pt, style=Bold"/>
+          <TableCell Name="Cell109" Text="Ordem de serviço:" VertAlign="Center" Font="Arial, 10pt, style=Bold"/>
+          <TableCell Name="Cell110" Text="[PadLeft([OSData.OrderId], 8, '0')]" VertAlign="Center"/>
+        </TableRow>
+      </TableObject>
+      <TableObject Name="Table5" Left="1.13" Top="198.45" Width="718.2" Height="85.06" Border.Lines="Left, Right, Top">
+        <TableColumn Name="Column25"/>
+        <TableColumn Name="Column26" Width="585.9"/>
+        <TableColumn Name="Column27"/>
+        <TableRow Name="Row14" Height="51.98">
+          <TableCell Name="Cell65"/>
+          <TableCell Name="Cell71" Border.Lines="Bottom"/>
+          <TableCell Name="Cell72"/>
+        </TableRow>
+        <TableRow Name="Row15" Height="33.08">
+          <TableCell Name="Cell70"/>
+          <TableCell Name="Cell73">
+            <TextObject Name="Text22" Width="585.9" Height="33.08" Dock="Fill" Text="ASSINATURA" HorzAlign="Center" Font="Arial, 10pt, style=Bold"/>
+          </TableCell>
+          <TableCell Name="Cell74"/>
+        </TableRow>
+      </TableObject>
+      <TableObject Name="Table6" Left="1.13" Top="283.95" Width="718.23" Height="56.7" Border.Lines="All">
+        <TableColumn Name="Column28" Width="166.97"/>
+        <TableColumn Name="Column29" Width="176.42"/>
+        <TableColumn Name="Column30" Width="81.92"/>
+        <TableColumn Name="Column31" Width="100.82"/>
+        <TableColumn Name="Column32" Width="63.02"/>
+        <TableColumn Name="Column33" Width="63.02"/>
+        <TableColumn Name="Column34" Width="66.06"/>
+        <TableRow Name="Row17" Height="28.35">
+          <TableCell Name="Cell78" Border.Lines="Bottom" ColSpan="6">
+            <TextObject Name="Text24" Width="652.17" Height="28.35" Dock="Fill" Text="SERVIÇOS" Padding="2, 1, 2, 1" VertAlign="Center" Font="Arial, 12pt, style=Bold"/>
+          </TableCell>
+          <TableCell Name="Cell79"/>
+          <TableCell Name="Cell80"/>
+          <TableCell Name="Cell81"/>
+          <TableCell Name="Cell82"/>
+          <TableCell Name="Cell103"/>
+          <TableCell Name="Cell105" Border.Lines="Bottom"/>
+        </TableRow>
+        <TableRow Name="Row18" Height="28.35">
+          <TableCell Name="Cell83" Text="Descrição" Padding="4, 1, 2, 1" VertAlign="Center" Font="Arial, 10pt, style=Bold"/>
+          <TableCell Name="Cell84" Border.Lines="Left" Text="Veículo" Padding="4, 1, 2, 1" VertAlign="Center" Font="Arial, 10pt, style=Bold"/>
+          <TableCell Name="Cell85" Border.Lines="Left" Text="Honorário" Padding="4, 1, 2, 1" VertAlign="Center" Font="Arial, 10pt, style=Bold"/>
+          <TableCell Name="Cell86" Border.Lines="Left" Text="Placa/Targeta" Padding="4, 1, 2, 1" VertAlign="Center" Font="Arial, 10pt, style=Bold"/>
+          <TableCell Name="Cell87" Border.Lines="Left" Text="Taxa" Padding="4, 1, 2, 1" VertAlign="Center" Font="Arial, 10pt, style=Bold"/>
+          <TableCell Name="Cell104" Border.Lines="Left" Text="Outros" Padding="4, 1, 2, 1" VertAlign="Center" Font="Arial, 10pt, style=Bold"/>
+          <TableCell Name="Cell106" Border.Lines="Left" Text="Total" Padding="4, 1, 2, 1" VertAlign="Center" Font="Arial, 10pt, style=Bold"/>
+        </TableRow>
+      </TableObject>
+      <DataBand Name="Data2" Top="344.65" Width="718.2" Height="24.57" DataSource="Services">
+        <TableObject Name="Table2" Left="1.13" Width="718.23" Height="24.57" Border.Lines="Left, Right, Bottom">
+          <TableColumn Name="Column8" Width="166.97"/>
+          <TableColumn Name="Column9" Width="176.42"/>
+          <TableColumn Name="Column10" Width="81.92"/>
+          <TableColumn Name="Column11" Width="100.82"/>
+          <TableColumn Name="Column12" Width="63.02"/>
+          <TableColumn Name="Column13" Width="63.02"/>
+          <TableColumn Name="Column14" Width="66.06"/>
+          <TableRow Name="Row2" Height="24.57">
+            <TableCell Name="Cell8" Border.Lines="Left" Text="[OSData.Services.Name]" Padding="4, 1, 2, 1" VertAlign="Center"/>
+            <TableCell Name="Cell9" Border.Lines="Left" Text="[OSData.Services.Vehicle]" Padding="4, 1, 2, 1" VertAlign="Center"/>
+            <TableCell Name="Cell10" Border.Lines="Left" Text="[FormatCurrency([OSData.Services.Honorary], 2)]" Padding="4, 1, 2, 1" HorzAlign="Right" VertAlign="Center"/>
+            <TableCell Name="Cell11" Border.Lines="Left" Text="[FormatCurrency([OSData.Services.PlateCard], 2)]" Padding="4, 1, 2, 1" HorzAlign="Right" VertAlign="Center"/>
+            <TableCell Name="Cell12" Border.Lines="Left" Text="[FormatCurrency([OSData.Services.Rate], 2)]" Padding="4, 1, 2, 1" HorzAlign="Right" VertAlign="Center"/>
+            <TableCell Name="Cell13" Border.Lines="Left" Text="[FormatCurrency([OSData.Services.Other], 2)]" Padding="4, 1, 2, 1" HorzAlign="Right" VertAlign="Center"/>
+            <TableCell Name="Cell14" Border.Lines="Left" Text="[[OSData.Services.Honorary] + [OSData.Services.PlateCard] + [OSData.Services.Rate] + [OSData.Services.Other]]" Padding="4, 1, 2, 1" Format="Currency" Format.UseLocale="true" HorzAlign="Right" VertAlign="Center"/>
+          </TableRow>
+        </TableObject>
+      </DataBand>
+    </DataBand>
+    <PageFooterBand Name="PageFooter1" Top="373.22" Width="718.2" Height="18.9"/>
+  </ReportPage>
+</Report>

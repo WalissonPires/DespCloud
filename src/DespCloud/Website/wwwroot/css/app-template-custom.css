@@ -1,0 +1,50 @@
+﻿.app-select-wrapper > .bootstrap-select {
+    background-color: transparent;
+}
+
+.app-select-wrapper > .bootstrap-select {
+    background-color: transparent;
+}
+
+    .app-select-wrapper > .bootstrap-select > button.dropdown-toggle {
+        background-color: transparent !important;
+    }
+
+
+/* BootstrapTable */
+
+.bootstrap-table .btn:not(.btn-link):not(.btn-circle) i {
+    font-size: 16px;
+}
+
+.bootstrap-table input[type="radio"] {
+    opacity: 1;
+    position: relative;
+    left: inherit;
+    transform: translateY(calc(50% - 3px));
+}
+.bootstrap-table .btn-group {
+    box-shadow: 0px 0px 1px rgba(0,0,0,.3);
+}
+
+    .bootstrap-table .btn-group button.btn {
+    }
+
+.bootstrap-table .search input.form-control {
+    border: none;
+    border-bottom: 1px solid #aaa;
+    box-shadow: none;
+    border-radius: 1px;
+}
+
+    .bootstrap-table .search input.form-control:hover,
+    .bootstrap-table .search input.form-control:focus,
+    .bootstrap-table .search input.form-control:active {
+        border-bottom-color: #2196F3;
+    }
+
+/* SelectPicker */
+.bootstrap-select[disabled] button.btn.dropdown-toggle.btn-default {
+    background-color: #f1f1f1 !important;
+    pointer-events: none;
+}

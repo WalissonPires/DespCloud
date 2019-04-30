@@ -1,0 +1,1 @@
+Usado o Inno Setup versão 5.6.1 para a criação do instalador

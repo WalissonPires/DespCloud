@@ -1,0 +1,93 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.168
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Website", "Website\Website.csproj", "{316CB18E-3708-48DD-806D-FC49F03E748B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApi", "WebApi\WebApi.csproj", "{697AA06A-A8FF-445B-960A-423CB8AFBAD7}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Base.WebApp", "Base.WebApp\Base.WebApp.csproj", "{BFF01AAE-004E-4B76-AD11-D999CA51A640}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Base.Domain", "Base.Domain\Base.Domain.csproj", "{A52F914D-C09E-4131-AF6E-C86F9AFBBA32}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Installer", "Installer", "{25135972-77BA-4177-AFCB-F85A65706636}"
+	ProjectSection(SolutionItems) = preProject
+		Installer\install-script-inno-setup.iss = Installer\install-script-inno-setup.iss
+		Installer\README.txt = Installer\README.txt
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "App", "App", "{29F77E2D-DE8A-4AF8-8832-97F424ED56A5}"
+	ProjectSection(SolutionItems) = preProject
+		Installer\App\run.vbs = Installer\App\run.vbs
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "bin", "bin", "{BA94D0CE-CE8B-4E00-8CED-B413AAC37A6D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "website", "website", "{DCCDBD5B-F350-4553-B87D-655C993FEFBB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "webapi", "webapi", "{B090F8F6-8539-4CB0-BA2E-C36EE64151AF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Base.Report", "Base.Report\Base.Report.csproj", "{D71BA4BB-52E9-4BD1-8A22-B4D5914B085A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{316CB18E-3708-48DD-806D-FC49F03E748B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{316CB18E-3708-48DD-806D-FC49F03E748B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{316CB18E-3708-48DD-806D-FC49F03E748B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{316CB18E-3708-48DD-806D-FC49F03E748B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{697AA06A-A8FF-445B-960A-423CB8AFBAD7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{697AA06A-A8FF-445B-960A-423CB8AFBAD7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{697AA06A-A8FF-445B-960A-423CB8AFBAD7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{697AA06A-A8FF-445B-960A-423CB8AFBAD7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BFF01AAE-004E-4B76-AD11-D999CA51A640}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BFF01AAE-004E-4B76-AD11-D999CA51A640}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BFF01AAE-004E-4B76-AD11-D999CA51A640}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BFF01AAE-004E-4B76-AD11-D999CA51A640}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A52F914D-C09E-4131-AF6E-C86F9AFBBA32}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A52F914D-C09E-4131-AF6E-C86F9AFBBA32}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A52F914D-C09E-4131-AF6E-C86F9AFBBA32}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A52F914D-C09E-4131-AF6E-C86F9AFBBA32}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D71BA4BB-52E9-4BD1-8A22-B4D5914B085A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D71BA4BB-52E9-4BD1-8A22-B4D5914B085A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D71BA4BB-52E9-4BD1-8A22-B4D5914B085A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D71BA4BB-52E9-4BD1-8A22-B4D5914B085A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{29F77E2D-DE8A-4AF8-8832-97F424ED56A5} = {25135972-77BA-4177-AFCB-F85A65706636}
+		{BA94D0CE-CE8B-4E00-8CED-B413AAC37A6D} = {29F77E2D-DE8A-4AF8-8832-97F424ED56A5}
+		{DCCDBD5B-F350-4553-B87D-655C993FEFBB} = {BA94D0CE-CE8B-4E00-8CED-B413AAC37A6D}
+		{B090F8F6-8539-4CB0-BA2E-C36EE64151AF} = {BA94D0CE-CE8B-4E00-8CED-B413AAC37A6D}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6E9D30FD-24F0-4EF0-ADC3-9DE52C62884B}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 6
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://walissonpires.visualstudio.com/
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = Website\\Website.csproj
+		SccProjectName1 = Website
+		SccLocalPath1 = Website
+		SccProjectUniqueName2 = WebApi\\WebApi.csproj
+		SccProjectName2 = WebApi
+		SccLocalPath2 = WebApi
+		SccProjectUniqueName3 = Base.WebApp\\Base.WebApp.csproj
+		SccProjectName3 = Base.WebApp
+		SccLocalPath3 = Base.WebApp
+		SccProjectUniqueName4 = Base.Domain\\Base.Domain.csproj
+		SccProjectName4 = Base.Domain
+		SccLocalPath4 = Base.Domain
+		SccProjectUniqueName5 = Base.Report\\Base.Report.csproj
+		SccProjectName5 = Base.Report
+		SccLocalPath5 = Base.Report
+	EndGlobalSection
+EndGlobal

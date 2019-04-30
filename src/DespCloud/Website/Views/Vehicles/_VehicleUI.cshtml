@@ -1,0 +1,111 @@
+﻿@using Base.Domain.Entities
+
+<div class="card m-0">
+    <div class="header">
+        <h2>Veículo</h2>
+    </div>
+    <div class="body">
+        <form>
+            <input name="id" type="hidden" value="0" />
+            <input name="clientId" type="hidden" value="0" />
+            <div class="row clearfix">
+                <div class="col-sm-3">
+                    <label>Tipo</label>
+                    <div class="form-group">
+                        <select name="type" class="form-control selectpicker">
+                            <option value="@((int)VehicleType.Car)">Carro</option>
+                            <option value="@((int)VehicleType.MotorCycle)">Moto</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <label>Placa</label>
+                    <div class="form-group">
+                        <div class="form-line">
+                            <input name="plate" type="text" class="form-control plate masked" />
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <label>Modelo</label>
+                    <div class="form-group">
+                        <div class="form-line">
+                            <input name="model" type="text" class="form-control" />
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <label>Fabricante</label>
+                    <div class="form-group">
+                        <div class="form-line">
+                            <input name="manufacturer" type="text" class="form-control" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row clearfix">
+                <div class="col-sm-4">
+                    <label>Ano</label>
+                    <div class="form-group">
+                        <div class="form-line">
+                            <input name="yearManufactureModel" type="text" class="form-control yearManufactureModel masked" />
+                            <input name="yearManufacture" type="hidden" />
+                            <input name="modelYear" type="hidden" />
+                        </div>
+                    </div>
+                </div>                
+                <div class="col-sm-4">
+                    <label>Chassi</label>
+                    <div class="form-group">
+                        <div class="form-line">
+                            <input name="chassis" type="text" class="form-control" />
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <label>Renavam</label>
+                    <div class="form-group">
+                        <div class="form-line">
+                            <input name="renavam" type="text" class="form-control" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row clearfix">
+                <div class="col-sm-4">
+                    <label>Cor</label>
+                    <div class="form-group">
+                        <div class="form-line">
+                            <input name="color" type="text" class="form-control" />
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <label>Estado (UF)</label>
+                    <div class="form-group">
+                        <select name="countyId" type="text" class="form-control ui-selectpicker" data-county="true">
+                            <option value="31">Minas Gerais</option>
+                        </select>
+                        <input name="countyName" type="hidden" data-countyName />
+                        <input name="countyInitials" type="hidden" data-countyInitials />
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <label>Cidade</label>
+                    <div class="form-group">
+                        <select name="cityId" type="text" class="form-control ui-selectpicker" data-city="true">
+                            <option value="3127701">Governador Valadares</option>
+                        </select>
+                        <input name="cityName" type="hidden" data-cityName />
+                    </div>
+                </div>
+            </div>
+            <div class="row row-group-btn px-1">
+                <div class="col-m-12">
+                    <button name="exit" type="button" class="btn btn-warning m-t-15 waves-effect">SAIR</button>
+                    <button name="save" type="submit" class="btn btn-primary m-t-15 waves-effect">SALVAR</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,130 @@
+[
+  /* CSS */
+  {
+    "outputFileName": "wwwroot/bundle/css/template-core.min.css",
+    "inputFiles": [
+      "wwwroot/lib/template/plugins/bootstrap/css/bootstrap.css",
+      "wwwroot/lib/template/plugins/node-waves/waves.css",
+      "wwwroot/lib/template/plugins/animate-css/animate.css"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/bundle/css/template-plugins.min.css",
+    "inputFiles": [
+      "wwwroot/lib/template/plugins/morrisjs/morris.css",
+      "wwwroot/lib/template/plugins/bootstrap-material-datetimepicker/css/bootstrap-material-datetimepicker.css",
+      "wwwroot/lib/template/plugins/bootstrap-datepicker/css/bootstrap-datepicker.css",
+      "wwwroot/lib/template/plugins/waitme/waitMe.css",
+      "wwwroot/lib/template/plugins/bootstrap-select/css/bootstrap-select.css"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/bundle/css/app-plugins.min.css",
+    "inputFiles": [
+      "wwwroot/lib/bootstrap-table/bootstrap-table.min.css",
+      "wwwroot/lib/izi-modal/css/iziModal.min.css"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/bundle/css/template-custom.min.css",
+    "inputFiles": [
+      "wwwroot/lib/template/css/style.css",
+      "wwwroot/css/app-template-custom.css",
+      "wwwroot/lib/template/css/themes/all-themes.css",
+      "wwwroot/css/app-layout.css"
+    ]
+  },
+  /* JS */
+  {
+    "outputFileName": "wwwroot/bundle/js/template-core.min.js",
+    "inputFiles": [
+      "wwwroot/lib/template/plugins/jquery/jquery.min.js",
+      "wwwroot/lib/template/plugins/bootstrap/js/bootstrap.js",
+      "wwwroot/lib/template/plugins/bootstrap-select/js/bootstrap-select.js",
+      "wwwroot/lib/template/plugins/jquery-slimscroll/jquery.slimscroll.js",
+      "wwwroot/lib/template/plugins/node-waves/waves.js"
+    ],
+    "minify": {
+      "enabled": true,
+      "renameLocals": true
+    },
+    "sourceMap": false
+  },
+  {
+    "outputFileName": "wwwroot/bundle/js/template-plugin.min.js",
+    "inputFiles": [
+      "wwwroot/lib/template/plugins/jquery-countto/jquery.countTo.js",
+      "wwwroot/lib/template/plugins/raphael/raphael.min.js",
+      "wwwroot/lib/template/plugins/morrisjs/morris.js",
+      "wwwroot/lib/template/plugins/autosize/autosize.js",
+      "wwwroot/lib/template/plugins/momentjs/moment.js",
+      "wwwroot/lib/template/plugins/bootstrap-material-datetimepicker/js/bootstrap-material-datetimepicker.js",
+      "wwwroot/lib/template/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js",
+      "wwwroot/lib/template/plugins/bootstrap-notify/bootstrap-notify.js"
+    ],
+    "minify": {
+      "enabled": true,
+      "renameLocals": true
+    },
+    "sourceMap": false
+  },
+  {
+    "outputFileName": "wwwroot/bundle/js/app-plugins.min.js",
+    "inputFiles": [
+      "wwwroot/lib/bootstrap-table/bootstrap-table.min.js",
+      "wwwroot/lib/bootstrap-table/locale/bootstrap-table-pt-BR.min.js",
+      "wwwroot/lib/izi-modal/js/iziModal.min.js",
+      "wwwroot/lib/jquery-validation/dist/jquery.validate.js",
+      "wwwroot/js/core/jquery-validation/methods_pt.js",
+      "wwwroot/js/core/jquery-validation/messages_pt_BR.js",
+      "wwwroot/lib/form-to-json/formToJson.js",
+      "wwwroot/lib/jquery-mask/dist/jquery.mask.js"
+    ],
+    "minify": {
+      "enabled": true,
+      "renameLocals": true
+    },
+    "sourceMap": false
+  },
+  {
+    "outputFileName": "wwwroot/bundle/js/app.min.js",
+    "inputFiles": [
+      "wwwroot/js/core/polyfill.js",
+      "wwwroot/js/core/utils-modules.js",
+      "wwwroot/js/core/utils-generic.js",
+      "wwwroot/js/core/utils-bootstrapTable.js",
+      "wwwroot/js/core/utils-form.js",
+      "wwwroot/js/core/utils-mask.js",
+      "wwwroot/js/core/utils.notify.js",
+      "wwwroot/js/core/utils-modal.js",
+      "wwwroot/js/core/utils-fetch.js",
+      "wwwroot/js/core/layout.js",
+      "wwwroot/js/entities/order-service.js",
+      "wwwroot/js/entities/vehicle.js",
+      "wwwroot/js/services/config-api.js",
+      "wwwroot/js/services/companies.js",
+      "wwwroot/js/services/clients.api.js",
+      "wwwroot/js/services/services-api.js",
+      "wwwroot/js/services/vehicles-api.js",
+      "wwwroot/js/services/service-orders.api.js",
+      "wwwroot/js/services/order-service-items.api.js",
+      "wwwroot/js/components/ui/select-ui.js",
+      "wwwroot/js/components/ui/base-editor.js",
+      "wwwroot/js/components/order-service/index.js",
+      "wwwroot/js/components/order-service/editor.js",
+      "wwwroot/js/components/client/editor.js",
+      "wwwroot/js/components/client/index.js",
+      "wwwroot/js/components/order-service/editor-item.js",
+      "wwwroot/js/components/vehicle/editor.js",
+      "wwwroot/js/components/vehicle/index.js",
+      "wwwroot/js/components/service/editor.js",
+      "wwwroot/js/components/service/index.js",
+      "wwwroot/js/components/configuration/company.js"
+    ],
+    "minify": {
+      "enabled": true,
+      "renameLocals": true
+    },
+    "sourceMap": false
+  }
+]

@@ -1,0 +1,98 @@
+﻿<div class="card m-0">
+    <div class="header">
+        <h2>Ordem de serviço</h2>        
+    </div>
+    <div class="body">
+        <form>
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs" role="tablist">
+                <li role="presentation" class="active">
+                    <a href="#order_service_ui_data_tab" data-toggle="tab" aria-expanded="true">
+                        <i class="material-icons">assignment</i> Dados
+                    </a>
+                </li>
+                <li role="presentation" class="">
+                    <a href="#order_service_ui_services_tab" data-toggle="tab" aria-expanded="false">
+                        <i class="material-icons">directions_car</i> Serviços
+                    </a>
+                </li>
+            </ul>
+            <!-- Tab panes -->
+            <div class="tab-content">
+                <div role="tabpanel" class="tab-pane fade active in" id="order_service_ui_data_tab">
+                    <div class="row clearfix row-data">
+                        <div class="col-sm-4">
+                            <label>Protocolo</label>
+                            <div class="form-group">
+                                <div class="form-line">
+                                    <input name="id" type="number" class="form-control" readonly />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <label>Data de criação</label>
+                            <div class="form-group">
+                                <div class="form-line">
+                                    <input name="createAt" type="date" class="form-control" readonly />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <label>Data de fechamento</label>
+                            <div class="form-group">
+                                <div class="form-line">
+                                    <input name="closedAt" type="date" class="form-control" readonly />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row clearfix row-data">
+                        <div class="col-sm-6">
+                            <label>Cliente</label>
+                            <div class="form-group">
+                                <select name="clientId" data-live-search="true" class="form-control ui-selectpicker noupdate"></select>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <label>Status</label>
+                            <div class="form-group">                                
+                                <select asp-items="Html.GetEnumSelectList<Base.Domain.Entities.OrderStatus>()" name="status" type="text" class="form-control selectpicker"></select>                                
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <label>Valor Total</label>
+                            <div class="form-group">
+                                <div class="form-line">
+                                    <input name="total" type="text" class="form-control" readonly />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row row-group-btn px-1">
+                        <div class="col-m-12">
+                            <button name="exit" type="button" class="btn btn-warning m-t-15 waves-effect">SAIR</button>
+                            <button name="save" type="submit" class="btn btn-primary m-t-15 waves-effect">SALVAR</button>
+                        </div>
+                    </div>
+                </div>
+                <div role="tabpanel" class="tab-pane fade" id="order_service_ui_services_tab">
+                    <div class="row clearfix row-data">
+                        <div class="col-sm-12">
+                            <div class="btn-group btn-group-manager" role="group">
+                                <button name="addService" type="button" class="btn btn-danger waves-effect">Adicionar</button>
+                                <button name="editService" type="button" class="btn btn-danger waves-effect">Editar</button>
+                                <button name="removeService" type="button" class="btn btn-danger waves-effect">Excluir</button>
+                            </div>
+                            <table name="tableServices"></table>
+                        </div>
+                    </div>
+                    <div class="row row-group-btn px-1">
+                        <div class="col-m-12">
+                            <button name="exit" type="button" class="btn btn-warning m-t-15 waves-effect">SAIR</button>
+                        </div>
+                    </div>
+                </div>
+            </div>                                
+        </form>
+    </div>
+</div>

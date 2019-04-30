@@ -1,0 +1,135 @@
+﻿<div class="card m-0">
+    <div class="header">
+        <h2>Cliente</h2>
+    </div>
+    <div class="body address-content">
+        <form>
+            <input name="id" type="hidden" value="0" />
+            <div class="row clearfix">
+                <div class="col-sm-4">
+                    <label>Nome</label>
+                    <div class="form-group">
+                        <div class="form-line">
+                            <input name="name" type="text" class="form-control" />
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <label>Telefone</label>
+                    <div class="form-group">
+                        <div class="form-line">
+                            <input name="phone" type="text" class="form-control phone-ddd masked" />
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <label>Contato</label>
+                    <div class="form-group">
+                        <div class="form-line">
+                            <input name="contactName" type="text" class="form-control" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row clearfix">
+                <div class="col-sm-4">
+                    <label>Email</label>
+                    <div class="form-group">
+                        <div class="form-line">
+                            <input name="email" type="text" class="form-control" />
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <label>CPF/CNPJ</label>
+                    <div class="form-group">
+                        <div class="form-line">
+                            <input name="cpfCnpj" type="text" class="form-control cpf-cnpj masked" />
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <label>RG/IE</label>
+                    <div class="form-group">
+                        <div class="form-line">
+                            <input name="rgIE" type="text" class="form-control" />
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <label>Orgão emissor</label>
+                    <div class="form-group">
+                        <div class="form-line">
+                            <input name="org" type="text" class="form-control" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row clearfix">
+                <div class="col-sm-4">
+                    <label>CEP</label>
+                    <div class="input-group">
+                        <div class="form-line">
+                            <input name="address.zipCode" type="text" class="form-control zipcode masked" data-zipcode />
+                        </div>
+                        <span class="input-group-addon addon-btn">
+                            <i class="material-icons no-selection" title="Pesquisar CEP" data-search-zipcode>search</i>
+                        </span>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <label>Número/Complemento</label>
+                    <div class="form-group">
+                        <div class="form-line">
+                            <input name="address.number" type="text" class="form-control" />
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <label>Logradouro</label>
+                    <div class="form-group">
+                        <div class="form-line">
+                            <input name="address.street" type="text" class="form-control" data-street />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row clearfix">
+                <div class="col-sm-4">
+                    <label>Estado (UF)</label>
+                    <div class="form-group">
+                        <select name="address.countyId" type="text" class="form-control ui-selectpicker" data-county="true">
+                            <option value="31">Minas Gerais</option>
+                        </select>
+                        <input name="address.countyName" type="hidden" data-countyName />
+                        <input name="address.countyInitials" type="hidden" data-countyInitials />
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <label>Cidade</label>
+                    <div class="form-group">
+                        <select name="address.cityId" type="text" class="form-control ui-selectpicker" data-city="true">
+                            <option value="3127701">Governador Valadares</option>
+                        </select>
+                        <input name="address.cityName" type="hidden" data-cityName />
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <label>Bairro</label>
+                    <div class="form-group">
+                        <select name="address.districtId" type="text" class="form-control ui-selectpicker" data-district="true">
+                            <option value="4331">Centro</option>
+                        </select>
+                        <input name="address.districtName" type="hidden" data-districtName />
+                    </div>
+                </div>
+            </div>
+            <div class="row row-group-btn px-1">
+                <div class="col-m-12">
+                    <button name="exit" type="button" class="btn btn-warning m-t-15 waves-effect">SAIR</button>
+                    <button name="save" type="submit" class="btn btn-primary m-t-15 waves-effect">SALVAR</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

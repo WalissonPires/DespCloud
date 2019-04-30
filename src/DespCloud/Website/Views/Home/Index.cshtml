@@ -1,0 +1,53 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="block-header app-select-wrapper">
+    <select class="form-control show-tick" id="appLayoutTabSelect">
+        <option value="appTabDashboard">Dashboard</option>        
+    </select>
+</div>
+<div class="app-tabs-content" id="appLayoutTabsContent">
+    <div class="app-tab app-active" id="appTabDashboard">
+        <div class="row clearfix">
+            <div class="col-md-12">
+                <h1 style="color: #666;">Bem vindo ao <b>DespCloud</b></h1>
+            </div>
+        </div>
+        <div class="row clearfix" style="display: none;">
+            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                <div class="info-box bg-pink hover-expand-effect">
+                    <div class="icon">
+                        <i class="material-icons">playlist_add_check</i>
+                    </div>
+                    <div class="content">
+                        <div class="text">ORDEM DE SERVIÇO</div>
+                        <div class="number count-to" data-from="0" data-to="125" data-speed="15" data-fresh-interval="20">15</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                <div class="info-box bg-cyan hover-expand-effect">
+                    <div class="icon">
+                        <i class="material-icons">help</i>
+                    </div>
+                    <div class="content">
+                        <div class="text">CLIENTES</div>
+                        <div class="number count-to" data-from="0" data-to="257" data-speed="1000" data-fresh-interval="20">257</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                <div class="info-box bg-light-green hover-expand-effect">
+                    <div class="icon">
+                        <i class="material-icons">forum</i>
+                    </div>
+                    <div class="content">
+                        <div class="text">VEÍCULOS</div>
+                        <div class="number count-to" data-from="0" data-to="243" data-speed="1000" data-fresh-interval="20">243</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>    
+</div>
